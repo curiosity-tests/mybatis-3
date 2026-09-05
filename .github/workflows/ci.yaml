@@ -52,7 +52,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ inputs.leg || github.event_name }}
   cancel-in-progress: true
 
 run-name: "Java CI ${{ inputs.leg || 'push' }} ${{ inputs.racecar_run }}"
