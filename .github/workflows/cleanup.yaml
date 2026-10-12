@@ -1,7 +1,5 @@
 name: Cleanup Old Workflow Runs
 on:
-  schedule:
-    - cron: '0 0 * * *' # daily at midnight
   workflow_dispatch:
 
 permissions:
